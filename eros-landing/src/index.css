@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #F8FAFC;
+    color: #102A43;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .text-gradient-emergency {
+    background: linear-gradient(135deg, #E53935 0%, #B71C1C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-navy {
+    background: linear-gradient(135deg, #102A43 0%, #1565C0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-green {
+    background: linear-gradient(135deg, #16A34A 0%, #1565C0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-operational {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #E2E8F0;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .route-line {
+    stroke-dasharray: 12 6;
+    animation: dashMove 1.5s linear infinite;
+  }
+
+  .signal-green {
+    animation: glowGreen 2s ease-in-out infinite;
+  }
+
+  .signal-red {
+    animation: glowRed 2s ease-in-out infinite;
+  }
+
+  @keyframes dashMove {
+    to { stroke-dashoffset: -18; }
+  }
+
+  @keyframes glowGreen {
+    0%, 100% { box-shadow: 0 0 8px #16A34A, 0 0 16px rgba(22, 163, 74, 0.4); }
+    50% { box-shadow: 0 0 12px #16A34A, 0 0 24px rgba(22, 163, 74, 0.6); }
+  }
+
+  @keyframes glowRed {
+    0%, 100% { box-shadow: 0 0 8px #E53935, 0 0 16px rgba(229, 57, 53, 0.4); }
+    50% { box-shadow: 0 0 12px #E53935, 0 0 24px rgba(229, 57, 53, 0.6); }
+  }
+
+  @keyframes ambulanceMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(170px); }
+  }
+
+  @keyframes signalChange {
+    0%, 35% { background-color: #E53935; }
+    45%, 55% { background-color: #F59E0B; }
+    65%, 100% { background-color: #16A34A; }
+  }
+
+  @keyframes radarExpand {
+    0% { transform: scale(0.3); opacity: 0.8; }
+    100% { transform: scale(2.5); opacity: 0; }
+  }
+
+  @keyframes routeProgress {
+    0% { stroke-dashoffset: 500; }
+    100% { stroke-dashoffset: 0; }
+  }
+
+  @keyframes floatChip {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+  }
+
+  @keyframes dataPacket {
+    0% { transform: translateX(0) translateY(0); opacity: 1; }
+    100% { transform: translateX(40px) translateY(-10px); opacity: 0; }
+  }
+
+  .animate-ambulance-move {
+    animation: ambulanceMove 6s ease-in-out infinite alternate;
+  }
+
+  .animate-signal-change {
+    animation: signalChange 4s ease-in-out infinite;
+  }
+
+  .animate-radar-expand {
+    animation: radarExpand 2s ease-out infinite;
+  }
+
+  .animate-route-progress {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: routeProgress 3s ease-in-out infinite;
+  }
+
+  .animate-float-chip {
+    animation: floatChip 3s ease-in-out infinite;
+  }
+
+  .animate-data-packet {
+    animation: dataPacket 1.5s ease-in-out infinite;
+  }
+
+  .bg-map-subtle {
+    background-image:
+      linear-gradient(rgba(203, 213, 224, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(203, 213, 224, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .bg-road-pattern {
+    background-image:
+      linear-gradient(rgba(16, 42, 67, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16, 42, 67, 0.04) 1px, transparent 1px),
+      linear-gradient(rgba(16, 42, 67, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16, 42, 67, 0.02) 1px, transparent 1px);
+    background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+    background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
