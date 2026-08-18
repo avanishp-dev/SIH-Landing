@@ -6,12 +6,12 @@ export default function LoginPage() {
     <div className="min-h-screen bg-surface-bg flex flex-col items-center justify-center px-4">
       <div className="max-w-md w-full text-center">
         <div className="mb-8">
-          <h1 className="text-3xl font-black text-command-navy font-display mb-2">EROS</h1>
+          <h1 className="text-3xl font-black text-command-navy font-display mb-2">TVARIT</h1>
           <p className="text-text-secondary text-sm">Command Center Access</p>
         </div>
         <div className="bg-white border border-surface-border rounded-2xl p-8 shadow-sm">
           <p className="text-text-secondary mb-6">
-            Authentication will be connected to the EROS backend. For now, this is a placeholder route.
+            Authentication will be connected to the TVARIT backend. For now, this is a placeholder route.
           </p>
           <Link
             to="/"

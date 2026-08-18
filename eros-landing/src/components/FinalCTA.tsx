@@ -23,11 +23,14 @@ export default function FinalCTA() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl sm:text-5xl font-black text-white font-display leading-tight mb-6">
-            Every Second Has a Route.
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black font-display tracking-tight leading-tight mb-6">
+            <span className="text-white">Every Second Counted.</span>{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-corridor-green to-emerald-400">
+              Every Route Cleared.
+            </span>
           </h2>
-          <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto">
-            EROS turns real-time data into coordinated emergency action.
+          <p className="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+            TVARIT turns real-time data into coordinated emergency action, ensuring priority routes when it matters most.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

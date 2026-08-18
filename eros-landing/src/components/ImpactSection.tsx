@@ -119,7 +119,7 @@ export default function ImpactSection() {
 
               <div className="relative">
                 <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-command-navy flex items-center justify-center shadow-lg">
-                  <span className="text-2xl sm:text-3xl font-black text-white font-display">EROS</span>
+                  <span className="text-2xl sm:text-3xl font-black text-white font-display">TVARIT</span>
                 </div>
                 <div className="absolute -inset-4 rounded-full border-2 border-dashed border-corridor-green/30" />
               </div>

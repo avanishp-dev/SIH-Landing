@@ -44,11 +44,15 @@ export default function TeamSection() {
               className="bg-white border border-surface-border rounded-2xl p-6 shadow-sm text-center group"
             >
               {/* Avatar placeholder */}
-              <div className="relative mx-auto w-20 h-20 mb-4">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-slate-100 to-slate-200 border-2 border-surface-border flex items-center justify-center">
-                  <span className="text-2xl font-black text-slate-300 font-display">{member.id}</span>
-                </div>
-                <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-corridor-green border-2 border-white" />
+              <div className="relative mx-auto w-24 h-24 mb-4">
+                {member.photo ? (
+                  <img src={member.photo} alt={member.name} className="w-full h-full rounded-full object-cover border-2 border-surface-border" />
+                ) : (
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-slate-100 to-slate-200 border-2 border-surface-border flex items-center justify-center">
+                    <span className="text-2xl font-black text-slate-300 font-display">{member.id}</span>
+                  </div>
+                )}
+                <div className="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-corridor-green border-2 border-white" />
               </div>
 
               <p className="text-[10px] font-bold text-text-secondary tracking-widest uppercase mb-1">
@@ -58,13 +62,17 @@ export default function TeamSection() {
               <p className="text-sm font-medium text-emergency-red mb-2">{member.role}</p>
               <p className="text-xs text-text-secondary leading-relaxed mb-4">{member.contribution}</p>
 
-              <div className="flex items-center justify-center gap-3 opacity-40 group-hover:opacity-70 transition-opacity">
-                <button className="p-1.5 rounded-lg hover:bg-surface-bg transition-colors" aria-label="GitHub placeholder">
-                  <Github size={16} className="text-command-navy" />
-                </button>
-                <button className="p-1.5 rounded-lg hover:bg-surface-bg transition-colors" aria-label="LinkedIn placeholder">
-                  <Linkedin size={16} className="text-command-navy" />
-                </button>
+              <div className="flex items-center justify-center gap-3 opacity-40 group-hover:opacity-100 transition-opacity">
+                {member.github && (
+                  <a href={member.github} target="_blank" rel="noopener noreferrer" className="p-1.5 rounded-lg hover:bg-surface-bg transition-colors" aria-label={`${member.name} GitHub`}>
+                    <Github size={16} className="text-command-navy" />
+                  </a>
+                )}
+                {member.linkedin && (
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="p-1.5 rounded-lg hover:bg-surface-bg transition-colors" aria-label={`${member.name} LinkedIn`}>
+                    <Linkedin size={16} className="text-command-navy" />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}

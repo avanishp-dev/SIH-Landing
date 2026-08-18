@@ -116,7 +116,7 @@ export default function HowItWorks() {
             <span className="w-8 h-0.5 bg-deep-blue rounded" />
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-command-navy font-display">
-            How <span className="text-gradient-navy">EROS Works</span>
+            How <span className="text-gradient-navy">TVARIT Works</span>
           </h2>
           <p className="mt-4 text-text-secondary max-w-xl mx-auto">
             Six coordinated stages — from ambulance detection to emergency resolution.

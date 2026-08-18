@@ -52,7 +52,7 @@ export default function CommandCenterPreview() {
                 <span className="w-3 h-3 rounded-full bg-amber-400/80" />
                 <span className="w-3 h-3 rounded-full bg-green-400/80" />
               </div>
-              <span className="text-xs text-slate-400 ml-2 font-mono">eros-command.local/dashboard</span>
+              <span className="text-xs text-slate-400 ml-2 font-mono">tvarit-command.local/dashboard</span>
               <div className="ml-auto flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                 <span className="text-xs text-green-400 font-medium">LIVE</span>

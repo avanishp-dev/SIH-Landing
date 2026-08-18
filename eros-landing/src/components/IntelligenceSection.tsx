@@ -88,7 +88,7 @@ export default function IntelligenceSection() {
             <span className="text-gradient-emergency">the Response</span>
           </h2>
           <p className="mt-4 text-text-secondary max-w-xl mx-auto">
-            EROS doesn't just react — it observes, understands, decides, and responds. Every component is interconnected.
+            TVARIT doesn't just react — it observes, understands, decides, and responds. Every component is interconnected.
           </p>
         </motion.div>
 

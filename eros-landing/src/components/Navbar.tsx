@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
-const ErosLogo = () => (
+const TvaritLogo = () => (
   <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     {/* Location pin outer */}
     <path
@@ -60,11 +60,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5 group" aria-label="EROS Home">
-            <ErosLogo />
+          <a href="#" className="flex items-center gap-2.5 group" aria-label="TVARIT Home">
+            <TvaritLogo />
             <div className="flex flex-col leading-none">
               <span className="text-xl font-bold text-command-navy tracking-wide font-display">
-                EROS
+                TVARIT
               </span>
               <span className="text-[10px] text-text-secondary font-medium tracking-wider uppercase hidden sm:block">
                 Emergency Response & Operational System

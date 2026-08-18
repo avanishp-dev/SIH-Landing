@@ -197,7 +197,7 @@ export default function GreenCorridor() {
               <span className="text-gradient-green">That Thinks Ahead.</span>
             </h2>
             <p className="text-text-secondary text-lg leading-relaxed mb-7">
-              Before the ambulance reaches an intersection, EROS has already identified it, commanded a priority transition, and confirmed the green light. The corridor is cleared before it is needed.
+              Before the ambulance reaches an intersection, TVARIT has already identified it, commanded a priority transition, and confirmed the green light. The corridor is cleared before it is needed.
             </p>
 
             {/* Feature list */}
